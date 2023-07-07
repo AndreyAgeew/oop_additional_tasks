@@ -9,7 +9,15 @@
 
 
 class MyList2:
-    pass
+    def __init__(self, data):
+        self.data = data
+
+    def __iter__(self):
+        for x in self.data:
+            yield x
+
+    def __getitem__(self, index):
+        return self.data[index]
 
 
 my_list = MyList2([1, 2, 3])

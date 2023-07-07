@@ -11,7 +11,20 @@
 
 
 class Person:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(f"{self.name} is {self.age} years old")
+
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        return cls(name, birth_year)
+
+    @classmethod
+    def is_adult(cls, age):
+        return age > 18
 
 
 person1 = Person("John", 28)

@@ -14,7 +14,15 @@
 
 
 class Person2:
-    pass
+    __slots__ = ('name', 'age')
+
+
+class Employee2(Person2):
+    __slots__ = ('salary',)
+
+
+class Manager2(Employee2):
+    __slots__ = ('bonus', 'department')
 
 
 person = Person2()
